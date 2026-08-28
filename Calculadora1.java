@@ -2,35 +2,39 @@ import java.util.Scanner;
 
 public class Calculadora1 {
 
-    public float sumar(float a, float b) {
+    float a;
+    float b;
+    String operacion;
+
+    public float sumar() {
         return a + b;
     }
 
-    public float restar(float a, float b) {
+    public float restar() {
         return a - b;
     }
 
-    public float multiplicar(float a, float b) {
+    public float multiplicar() {
         return a * b;
     }
 
-    public float dividir(float a, float b) {
+    public float dividir() {
         return a / b;
     }
 
-    public float modulo(float a, float b) {
+    public float modulo() {
         return a % b;
     }
 
-    public double potencia(float a, float b) {
+    public double potencia() {
         return Math.pow(a, b);
     }
 
-    public double coseno(float a) {
+    public double coseno() {
         return Math.cos(a);
     }
 
-    public double seno(float a) {
+    public double seno() {
         return Math.sin(a);
     }
 
@@ -41,37 +45,44 @@ public class Calculadora1 {
         Calculadora1 calculadora1 = new Calculadora1();
 
         System.out.print("Digite la operacion (+, -, *, /, %, pow, cos, sin): ");
-        String operacion = nume.next();
+        calculadora1.operacion = nume.next();
 
         System.out.println("Digite el primer valor");
-        float a = nume.nextFloat();
+        calculadora1.a = nume.nextFloat();
 
         System.out.println("Digite el segundo valor");
-        float b = nume.nextFloat();
+        calculadora1.b = nume.nextFloat();
 
-        if (operacion.equals("+")) {
-            System.out.println(calculadora1.sumar(a, b));
+        if (calculadora1.operacion.equals("+")) {
+            System.out.println(calculadora1.sumar());
         }
-        if (operacion.equals("-")) {
-            System.out.println(calculadora1.restar(a, b));
+
+        if (calculadora1.operacion.equals("-")) {
+            System.out.println(calculadora1.restar());
         }
-        if (operacion.equals("*")) {
-            System.out.println(calculadora1.multiplicar(a, b));
+
+        if (calculadora1.operacion.equals("*")) {
+            System.out.println(calculadora1.multiplicar());
         }
-        if (operacion.equals("/")) {
-            System.out.println(calculadora1.dividir(a, b));
+
+        if (calculadora1.operacion.equals("/")) {
+            System.out.println(calculadora1.dividir());
         }
-        if (operacion.equals("%")) {
-            System.out.println(calculadora1.modulo(a, b));
+
+        if (calculadora1.operacion.equals("%")) {
+            System.out.println(calculadora1.modulo());
         }
-        if (operacion.equals("pow")) {
-            System.out.println(calculadora1.potencia(a, b));
+
+        if (calculadora1.operacion.equals("pow")) {
+            System.out.println(calculadora1.potencia());
         }
-        if (operacion.equals("cos")) {
-            System.out.println(calculadora1.coseno(a));
+
+        if (calculadora1.operacion.equals("cos")) {
+            System.out.println(calculadora1.coseno());
         }
-        if (operacion.equals("sin")) {
-            System.out.println(calculadora1.seno(a));
+
+        if (calculadora1.operacion.equals("sin")) {
+            System.out.println(calculadora1.seno());
         }
     }
 }
